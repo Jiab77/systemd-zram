@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 # zram install script for ubuntu/systemd
 # Based on the work of mystilleef/FedoraZram
