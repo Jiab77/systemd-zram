@@ -8,6 +8,9 @@
 # Copying scripts to system binary folder
 sudo cp -v zramst* /usr/sbin/
 
+# Setting scripts to executable
+sudo chmod -v +x /usr/sbin/zramst*
+
 # Copying service file to systemd folder
 sudo cp -v mkzram.service /lib/systemd/system/
 
