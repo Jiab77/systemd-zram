@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# zram install script for ubuntu/systemd
+# zRam install script for ubuntu/systemd
 # Based on the work of mystilleef/FedoraZram
 # URL: https://github.com/mystilleef/FedoraZram
 # Created by Jiab77
+
+# Starting install...
+echo -e "\nBegin zRam install...\n"
 
 # Copying scripts to system binary folder
 sudo cp -v zramst* /usr/sbin/
@@ -24,8 +27,16 @@ sudo systemctl daemon-reload
 sudo systemctl enable mkzram.service
 sudo systemctl start mkzram.service
 
+# Install finished...
+echo -e "\nzRam finished, showing some stats...\n"
+
 # Showing status after service start
 sudo systemctl status mkzram.service
 
 # Showing compression stats
 zramstat
+
+# Small break
+echo -e "Press any key to exit...\n"
+read
+exit 0
