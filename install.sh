@@ -44,11 +44,13 @@ echo -e "\nzRam install done. Showing service status:\n"
 # Showing status after service start
 sudo systemctl status mkzram.service
 
-# Showing compression stats
+# Showing compression stats and memory usage
 echo -e "\nzRam memory drives:\n"
 zramctl
 echo -e "\nzRam compression stats:\n"
 zramstat
+echo -e "\nTotal memory size:\n"
+free -mlht
 
 # Small break
 echo -e "\nPress enter to exit..."
