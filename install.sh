@@ -6,41 +6,51 @@
 # Created by Jiab77
 
 # Starting install...
-echo -e "\nBegin zRam install...\n"
+echo -e "\nBegin zRam install..."
 
 # Copying scripts to system binary folder
-sudo cp -v zramst* /usr/sbin/
+echo -e "\t- Copying scripts to system binary folder..."
+sudo cp zramst* /usr/sbin/
 
 # Setting scripts to executable
-sudo chmod -v +x /usr/sbin/zramst*
+echo -e "\t- Setting scripts to executable..."
+sudo chmod +x /usr/sbin/zramst*
 
 # Copying service file to systemd folder
-sudo cp -v mkzram.service /lib/systemd/system/
+echo -e "\t- Copying service file to systemd folder..."
+sudo cp mkzram.service /lib/systemd/system/
 
 # Copying configuration file to systemd config folder
-sudo cp -v zram.conf /etc/systemd/
+echo -e "\t- Copying configuration file to systemd config folder..."
+sudo cp zram.conf /etc/systemd/
 
 # Removes exec bit as requested by systemd
-sudo chmod -v -x /etc/systemd/zram.conf
-sudo chmod -v -x /lib/systemd/system/mkzram.service
+echo -e "\t- Removes exec bit as requested by systemd..."
+sudo chmod -x /etc/systemd/zram.conf
+sudo chmod -x /lib/systemd/system/mkzram.service
 
 # Reloading services configuration
+echo -e "\t- Reloading services configuration..."
 sudo systemctl daemon-reload
 
 # Enable then start the service
+echo -e "\t- Enable then start the service...\n"
 sudo systemctl enable mkzram.service
 sudo systemctl start mkzram.service
 
 # Install finished...
-echo -e "\nzRam install finished, showing some stats...\n"
+echo -e "\nzRam install done. Showing service status:\n"
 
 # Showing status after service start
 sudo systemctl status mkzram.service
 
 # Showing compression stats
+echo -e "\nzRam memory drives:\n"
+zramctl
+echo -e "\nzRam compression stats:\n"
 zramstat
 
 # Small break
-echo -e "Press any key to exit...\n"
+echo -e "\nPress enter to exit..."
 read
 exit 0
