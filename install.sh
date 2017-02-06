@@ -8,6 +8,10 @@
 # Starting install...
 echo -e "\nBegin zRam install..."
 
+# Disable existing swap space
+echo -e "\t- Disable existing swap space..."
+sudo swapoff -a
+
 # Copying scripts to system binary folder
 echo -e "\t- Copying scripts to system binary folder..."
 sudo cp zramst* /usr/sbin/
