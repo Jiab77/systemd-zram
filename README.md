@@ -27,6 +27,8 @@ This script was tested with and without `LVM+LUKS` and you just have to delete y
 
 For an unknown reason (*for now*), `zRam` seems to be incompatible with `ecryptfs` used for encrypt your home folder when you can't do a full disk encryption.
 
+> I guess that's because it requires an encrypted swap space...
+
 # Contribute
 
 Feel free to contribute to this project with your pull requests :+1:

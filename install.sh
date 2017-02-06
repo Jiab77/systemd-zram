@@ -16,8 +16,8 @@ sudo swapoff -a
 echo -e "\t- Copying scripts to system binary folder..."
 sudo cp zramst* /usr/sbin/
 
-# Setting scripts to executable
-echo -e "\t- Setting scripts to executable..."
+# Setting scripts as executable
+echo -e "\t- Setting scripts as executable..."
 sudo chmod +x /usr/sbin/zramst*
 
 # Copying service file to systemd folder
