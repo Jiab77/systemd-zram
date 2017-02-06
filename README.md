@@ -19,7 +19,7 @@ chmod -v +x install.sh
 
 After the installation, you might have to remove / delete your existing swap partition.
 
-*There is plenty of methods to do that and it depends of your configuration.*
+__*There is plenty of methods to do that and it depends of your configuration.*__
 
 This script was tested with and without `LVM+LUKS` and you just have to delete your swap partition with the tool of your choice (`fdisk`, `gparted`, `LVM` Tools [`vg`, `pv`, `lv`]).
 
