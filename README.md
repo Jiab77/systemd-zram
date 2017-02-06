@@ -17,7 +17,7 @@ chmod -v +x install.sh
 
 # Disable existing swap space
 
-After the installation, you might have to remove / delete your existing swap partition.
+After the installation, you might have to remove / delete your existing swap partition. The swap partition is completely useless with `zRam`.
 
 __*There is plenty of methods to do that and it depends of your configuration.*__
 
