@@ -9,7 +9,7 @@ Adapted from the work of mystillef - https://github.com/mystilleef/FedoraZram
 Just set `install.sh` as executable like this:
 
 ```shell
-chmod -v +x install.sh
+chmod -v a+x install.sh
 ./install.sh
 ```
 
