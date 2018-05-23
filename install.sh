@@ -49,10 +49,8 @@ echo -e "\nzRam install done. Showing service status:\n"
 sudo systemctl status mkzram.service
 
 # Showing compression stats and memory usage
-echo -e "\nzRam memory drives:\n"
-zramctl
-echo -e "\nzRam compression stats:\n"
-zramstat
+echo -e "\nzRam memory drives and stats:\n"
+zramctl --output NAME,ALGORITHM,DISKSIZE,DATA,COMPR,ZERO-PAGES,MEM-LIMIT,MEM-USED,MIGRATED,TOTAL,STREAMS,MOUNTPOINT
 echo -e "\nTotal memory size:\n"
 free -mlht
 
