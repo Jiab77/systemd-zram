@@ -1,34 +1,32 @@
-# systemd-zram
+# Bye bye Github...
 
-Creates a swap drives into memory using systemd
+Why do I'm leaving Github ?
 
-Adapted from the work of mystillef - https://github.com/mystilleef/FedoraZram
+> Because I can't live with the idea that Microsoft now owns the biggest place where the open source code is / was hosted.
 
-# Installation
+And ?
 
-Just set `install.sh` as executable like this:
+> Also because Github didn't took the time to ask us, developpers, users, if we would be ok with this operation and my reply would be **NO!**
 
-```shell
-chmod -v a+x install.sh
-./install.sh
-```
+# New home
 
-> The install script should be already executable but if not, proceed as explained above.
+But where could you find my code now ?
 
-# Disable existing swap space
+> I just moved to Gitlab as many other devs did.
 
-After the installation, you might have to remove / delete your existing swap partition. The swap partition is completely useless with `zRam`.
+# Gists
 
-__*There is plenty of methods to do that and it depends of your configuration.*__
+My gists will stay on Github for few reasons:
 
-This script was tested with and without `LVM+LUKS` and you just have to delete your swap partition with the tool of your choice (`fdisk`, `gparted`, `LVM` Tools [`vg`, `pv`, `lv`]).
+ * Github has a better audience on Google
+ * Did not found the same feature with the same visibility on Gitlab
 
-# Known Issues
+Place of my gists: https://gist.github.com/jiab77
 
-For an unknown reason (*for now*), `zRam` seems to be incompatible with `ecryptfs` used for encrypt your home folder when you can't do a full disk encryption.
+# Projects
 
-> I guess that's because it requires an encrypted swap space...
+I might just keep the projects names on Github too for the same reason as above, but with only the present file and a link to the new project home.
 
-# Contribute
+# Repository
 
-Feel free to contribute to this project with your pull requests :+1:
+The new place is here: https://gitlab.com/jiab77/systemd-zram
